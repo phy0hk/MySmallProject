@@ -4,6 +4,7 @@ var gameArr = [
     [0,0,0]
 ]
 
+let anouncer = document.getElementById("anouncer") ;
 var amIwin = "no";
 var turn = 3;
 var gameIsNotEnd = 0;
@@ -25,6 +26,7 @@ function Reset(){
     document.getElementById("bt6").innerHTML = " ";
     document.getElementById("bt7").innerHTML = " ";
     document.getElementById("bt8").innerHTML = " ";
+    anouncer.innerHTML = "Select X or O";
     for(var i = 0 ; i<3 ; i++){
         for(var j=0 ;j<3 ; j++){
             gameArr[i][j]=0;
@@ -40,6 +42,7 @@ function Reset(){
 
 }
 function bt0(){
+   
     if(turn===0 && gameArr[0][0]===0){
  document.getElementById("bt0").innerHTML = "X";
  turn=1;
@@ -148,56 +151,62 @@ function bt8(){
        gameChecker();
 }
 function gameChecker(){
+    if(turn==3){
+        anouncer.innerHTML = "You haven't selected!";
+    }else if(amIwin === "no" && turn!=3){
+        anouncer.innerHTML = "Game started" ;
+    }
+
     if(gameArr[0][0]==1 && gameArr[0][1]==1 && gameArr[0][2]==1){
-   document.getElementById("winner").innerHTML = "X Win.";
+        anouncer.innerHTML = "X Win.";
    amIwin = "yes";
 }else if(gameArr[1][0]==1 && gameArr[1][1]==1 && gameArr[1][2]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[2][0]==1 && gameArr[2][1]==1 && gameArr[2][2]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[0][0]==1 && gameArr[1][0]==1 && gameArr[2][0]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[0][1]==1 && gameArr[1][1]==1 && gameArr[2][1]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[0][2]==1 && gameArr[1][2]==1 && gameArr[2][2]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[0][0]==1 && gameArr[1][1]==1 && gameArr[2][2]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[0][2]==1 && gameArr[1][1]==1 && gameArr[2][0]==1){
-    document.getElementById("winner").innerHTML = "X Win.";
+    anouncer.innerHTML = "X Win.";
     amIwin = "yes";
 }else if(gameArr[0][0]==2 && gameArr[0][1]==2 && gameArr[0][2]==2){
-    document.getElementById("winner").innerHTML = "O Win.";
+    document.getElementById("anouncr").innerHTML = "O Win.";
     amIwin = "yes";
  }else if(gameArr[1][0]==2 && gameArr[1][1]==2 && gameArr[1][2]==2){
-     document.getElementById("winner").innerHTML = "O Win.";
+     anouncer.innerHTML = "O Win.";
      amIwin = "yes";
  }else if(gameArr[2][0]==2 && gameArr[2][1]==2 && gameArr[2][2]==2){
-     document.getElementById("winner").innerHTML = "O Win.";
+     anouncer.innerHTML = "O Win.";
      amIwin = "yes";
  }else if(gameArr[0][0]==2 && gameArr[1][0]==2 && gameArr[2][0]==2){
-    document.getElementById("winner").innerHTML = "O Win.";
+    anouncer.innerHTML = "O Win.";
     amIwin = "yes";
  }else if(gameArr[0][1]==2 && gameArr[1][1]==2 && gameArr[2][1]==2){
-     document.getElementById("winner").innerHTML = "O Win.";
+     anouncer.innerHTML = "O Win.";
      amIwin = "yes";
  }else if(gameArr[0][2]==2 && gameArr[1][2]==2 && gameArr[2][2]==2){
-     document.getElementById("winner").innerHTML = "O Win.";
+     anouncer.innerHTML = "O Win.";
      amIwin = "yes";
  }else if(gameArr[0][0]==2 && gameArr[1][1]==2 && gameArr[2][2]==2){
-     document.getElementById("winner").innerHTML = "O Win.";
+     anouncer.innerHTML = "O Win.";
      amIwin = "yes";
  }else if(gameArr[0][2]==2 && gameArr[1][1]==2 && gameArr[2][0]==2){
-     document.getElementById("winner").innerHTML = "O Win.";
+     anouncer.innerHTML = "O Win.";
      amIwin = "yes";
 }else if(gameArr[0][0]>0 && gameArr[0][1]>0 && gameArr[0][2]>0 && gameArr[1][0]>0 && gameArr[1][1]>0 && gameArr[1][2]>0 && gameArr[2][0]>0 && gameArr[2][1]>0 && gameArr[2][2]>0){
-    document.getElementById("winner").innerHTML = "Is Draw.";
+    anouncer.innerHTML = "Is Draw.";
     amIwin = "yes";
 }
 if(amIwin=="yes"){
