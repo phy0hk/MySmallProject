@@ -4,7 +4,7 @@ var gameArr = [
     [0,0,0]
 ]
 
-var amIwin = 0;
+var amIwin = "no";
 var turn = 3;
 var gameIsNotEnd = 0;
 function X(){
@@ -214,5 +214,9 @@ if(turn == 0){
 }else if(turn == 1){
     document.getElementById("X").disabled = true;
     document.getElementById("O").disabled = false;   
+}
+if(amIwin == "yes"){
+    document.getElementById("X").disabled = true;
+    document.getElementById("O").disabled = true;       
 }
 }
