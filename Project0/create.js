@@ -1,8 +1,13 @@
-let uname = document.getElementById('uname');
-let password = document.getElementById('pwd').value;
-let confirmPwd = document.getElementById('confirmpwd').value;
-let matchPwd = document.getElementById('matchPwd');
+const { createServer } = require('node:http');
+const fs = require('fs');
+const port = 8080;
+const pages = ['/index.html','/create.html','login.html'];
 
-function checkPwd(){
-    
-}
+const server = createServer((req,res)=>{
+    res.statuscode = 200;
+    res.setHeader('Content-Type','text/html');
+    res.end("gg");
+});
+server.listen(port,()=>{
+    console.log('Server Running at ${port}');
+});
