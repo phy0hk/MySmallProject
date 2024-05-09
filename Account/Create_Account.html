@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+
+<body>
+    <section class="sec">
+        <div class="container">
+            <div class="left">
+
+            </div>
+            <div class="right">
+
+
+                <form action="">
+
+                    <h3>Sign Up</h3>
+                    <label for="Username">Username</label>
+                    <div id="username" class="box miniContainer">
+                        <input type="text" required id="Username" placeholder="Username">
+                        <b style="color: red; font-size: 20px; display: none;"  class="icon" id="unameerr" title="Enter Username" >&#9432</b>
+                    </div>
+                    <div class="miniContainer">
+                        <label for="Email">Email</label>
+                        <input type="email" required id="Email" placeholder="Email">
+                        <b style="color: red; font-size: 20px; display: none;" class="icon" id="emailerr" title="Enter Email" >&#9432</b>
+                    </div>
+                    <div class="miniContainer">
+                        <label for="password">Password</label>
+                        <input type="password" required id="password" onkeyup="pwd()" onkeydown="pwd()">
+                        <b style="color: red; font-size: 20px; display: none;" class="icon" id="pwderr" title="Enter Password between 8-16">&#9432</b>
+                    </div>
+                    <div class="miniContainer">
+                        <label for="Confirm password">Confirm password</label>
+                        <input type="password" required id="confirm_password" onkeyup="pwd()" onkeydown="pwd()">
+                        <b style="color: red; font-size: 20px; display: none;" class="icon" id="cpwderr" title="Password didn't match!">&#9432</b>
+                    </div>
+                    <p id="notsuccess"> </p>
+                    <a href="#" class="btn" id="sign_up" onclick="signup()">Sign Up</a>
+
+                    <script src="Scripts/createacc_error.js"></script>
+                    <script src="Scripts/createacc.js"></script>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
