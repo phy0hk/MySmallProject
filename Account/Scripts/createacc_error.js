@@ -2,7 +2,7 @@ const username = document.getElementById("Username");
 const email = document.getElementById("Email");
 const passwd = document.getElementById("password");
 const cpasswd = document.getElementById("confirm_password");
-
+console.log("GG");
 function pwd() {
     console.log(passwd.value.length);
     if (passwd.value.length < 8) {
