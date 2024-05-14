@@ -1,0 +1,14 @@
+#productsContainer{
+    /* border: 2px solid black; */
+    height: 300px;
+
+    display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.childcontainer{
+    margin-right: 100px;
+    flex: 0 0 150px;
+    border: 2px solid blue;
+    height: 280px;
+}

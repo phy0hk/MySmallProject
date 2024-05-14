@@ -1,5 +1,5 @@
 const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
+const c = canvas.getContext("2d");
 var window_height = window.innerHeight;
 var window_width = window.innerWidth;
 
@@ -8,22 +8,35 @@ canvas.height = 500;
 
 canvas.style.background = "skyblue";
 
-setInterval(function(){
-    var i = 0;
-    if(i<500){
-        context.fillStyle = "red";
-     context.fillRect(100, i, 5, 5);
-     context.fillStyle = "skyblue";
-     context.fillRect(100,i-1,5,5);
-    
+let xpos = 10;
+let ypos = 0;
+function getMousePos(canvas,event){
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+     xpos = x;
+    ypos = y;
+}
+
+function Draw(){
+    c.clearRect(xpos,ypos-10,10,10);
+    c.fillRect(xpos,ypos,10,10);
+    ypos += 5;
+}
+function Draw(){
+    if(ypos<=490){
+    c.fillStyle = "skublue";
+    c.clearRect(xpos,ypos-10,10,10);
+    c.fillStyle = "black";
+    c.fillRect(xpos,ypos,10,10);
+    ypos += 5;
     }
-});
+    else{
+        c.fillRect(xpos,ypos,10,10)
+    }
+}
 
-
-// for (var i = 0; i < 500; i++) {
-//     context.fillStyle = "red";
-//     context.fillRect(100, i, 5, 5);
-//     context.fillStyle = "skyblue";
-//     context.fillRect(100,i-1,5,5);
-    
-// }
+canvas.addEventListener('mousedown',function(e){
+    getMousePos(canvas,e);
+})
+setInterval(Draw,10);
