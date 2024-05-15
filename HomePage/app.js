@@ -10,12 +10,16 @@ product.classList.add("childcontainer");
 Container.appendChild(product);
 }
 
-function fetchJSONData(){
-    let data;
-    fetch("./testProduct.json").then((res)=>{
-        return res.json();
-    }).then((data)=>console.log(data)).then;
-    return data;
-}
-let gg0 = fetchJSONData();
-console.log(gg0);
+
+
+// function fetchJSONData(){
+//     let data;
+//     fetch("./testProduct.json").then((res)=>{
+//         return res.json();
+//     }).then((data)=>{
+//         console.log(data);
+//     });
+
+// }
+// fetchJSONData();
+

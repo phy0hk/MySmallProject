@@ -1,0 +1,255 @@
+
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 0;
+    background-color: #202020;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .text-node { background-clip: text !important; -webkit-background-clip: text !important; }
+  
+  /* Board */
+  .board-59f0b5a56b42 {
+    position: relative;
+    width: 294px;
+    height: 438px;
+    background: #343434;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 200px;
+  }
+  
+  /* 5 */
+  .c-5-59f04eaad47d {
+    position: absolute;
+    left: 84px;
+    top: 233px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 6 */
+  .c-6-59f04eaad47e {
+    position: absolute;
+    left: 152px;
+    top: 233px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* minus */
+  .minus-59f04eaad47f {
+    position: absolute;
+    left: 215px;
+    top: 233px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 4 */
+  .c-4-59f04eaad47c {
+    position: absolute;
+    left: 23px;
+    top: 233px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Equal */
+  .equal-59fbc21b8d87 {
+    position: absolute;
+    left: 217px;
+    top: 360px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Dot */
+  .dot-59fbc21b8d86 {
+    position: absolute;
+    left: 153px;
+    top: 360px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 0 */
+  .c-0-59fbc21b8d85 {
+    position: absolute;
+    left: 86px;
+    top: 360px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Percent */
+  .percent-59fbc21b8d84 {
+    position: absolute;
+    left: 24px;
+    top: 359px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Plus */
+  .plus-59f04eaad483 {
+    position: absolute;
+    left: 215px;
+    top: 297px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 3 */
+  .c-3-59f04eaad482 {
+    position: absolute;
+    left: 151px;
+    top: 297px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 2 */
+  .c-2-59f04eaad481 {
+    position: absolute;
+    left: 84px;
+    top: 297px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 1 */
+  .c-1-59f04eaad480 {
+    position: absolute;
+    left: 22px;
+    top: 296px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Multiply */
+  .multiply-59f02770f95c {
+    position: absolute;
+    left: 215px;
+    top: 168px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 9 */
+  .c-9-59f02770f95b {
+    position: absolute;
+    left: 151px;
+    top: 168px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 8 */
+  .c-8-59f02770f95a {
+    position: absolute;
+    left: 84px;
+    top: 168px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* 7 */
+  .c-7-59f02770f959 {
+    position: absolute;
+    left: 22px;
+    top: 168px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Divide */
+  .divide-59f00379e97a {
+    position: absolute;
+    left: 215px;
+    top: 104px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* DEL */
+  .del-59effd4cc478 {
+    position: absolute;
+    left: 84px;
+    top: 104px;
+    width: 117px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* AC */
+  .ac-59efa46eadc1 {
+    position: absolute;
+    left: 23px;
+    top: 104px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50px;
+  }
+  
+  /* Output */
+  .output-59ef97a41f7a {
+    position: absolute;
+    left: 24px;
+    top: 25px;
+    width: 246px;
+    height: 44px;
+    background: #000000;
+    border-radius: 30px;
+  }
