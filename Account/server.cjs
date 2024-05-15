@@ -16,7 +16,7 @@ const server = http.createServer((req,res)=>{
         }
     });
 });
-server.listen(8080,()=>{
+server.listen( 192.168.182.1:8080,()=>{
     console.log(`Server listen to http://localhost:8080`);
 });
 function getContentType(filePath){
