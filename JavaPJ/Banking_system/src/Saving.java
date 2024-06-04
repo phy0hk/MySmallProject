@@ -1,12 +1,11 @@
-public class FixedAccound extends Banking {
-int NumbersOfYear;
-    public FixedAccound(String name, double balance,int NumbersOfYear) {
+public class Saving extends Banking{
+    int NumbersOfYear;
+    public Saving(String name, double balance,int NumbersOfYear) {
         super(name, balance);
         this.NumbersOfYear = NumbersOfYear;
     }
     @Override
     public double withdraw(double amount) {
-        System.out.println("FixedAccount Can't Be Withdraw!");
         return balance;
     }
     @Override
@@ -15,17 +14,10 @@ int NumbersOfYear;
     }
     @Override
     public double interest() {
-        double interestRate = 0.096;
+        double interestRate = 0.06;
         for(int i=1;i<=NumbersOfYear;i++){
             this.balance = balance + (balance*interestRate);
         }
         return balance;
     }
-    public int getNumbersOfYear() {
-        return NumbersOfYear;
-    }
-    public void setNumbersOfYear(int numbersOfYear) {
-        this.NumbersOfYear = numbersOfYear;
-    }
-
 }

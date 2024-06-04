@@ -17,4 +17,20 @@ public abstract class Banking {
     public String toString() {
         return "Name: "+name+",\n Balance:"+balance;
     }
+    public double getAmount() {
+        return amount;
+    }
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public String getName() {
+        return name;
+    }public void setBalance(double balance) {
+        this.balance = balance;
+    }public void setName(String name) {
+        this.name = name;
+    }
 }
