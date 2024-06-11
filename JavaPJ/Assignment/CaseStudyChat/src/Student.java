@@ -6,8 +6,8 @@ public class Student {
         this.name = name;
         this.classCode = classCode;
     }
-    public void reply(Student l) {
-        System.out.println(l.getName()+"");
+    public void reply(Student s) {
+        System.out.println(s.getName()+"");
     }
     public String getName() {
         return name;
