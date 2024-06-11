@@ -18,7 +18,7 @@ function getMousePos(canvas,event){
     ypos = y;
 }
 
-function Draw(){
+function Clear(){
     c.clearRect(xpos,ypos-10,10,10);
     c.fillRect(xpos,ypos,10,10);
     ypos += 5;
@@ -39,4 +39,4 @@ function Draw(){
 canvas.addEventListener('mousedown',function(e){
     getMousePos(canvas,e);
 })
-setInterval(Draw,10);
+
