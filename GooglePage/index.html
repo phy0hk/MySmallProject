@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="rightHeader">
+                <a href="https://mail.google.com/" style="padding-top: 7px;">Gmail</a>
+                <a href="https://www.google.com/imghp?hl=en" style="padding-top: 7px;">Images</a>
+                <img src="./Icons/application.png" class="apps" />
+                <button class="account">Sign In</Button>
+            </div>
+        </div>
+        <div id="main">
+            <img src="./Icons/googleText.png" width="280px" id="google" />
+            <div id="searchMain">
+                <img
+                    src="./Icons/magnifier.png"
+                    id="magnifier"
+                    height="18px"
+                    width="13px"
+                    alt=""
+                />
+                <input type="text" id="searchBar"/>
+                <img
+                    src="./Icons/Google_mic.svg.png"
+                    width="15px"
+                    title="Search by voice"
+                />
+                <img
+                    src="./Icons/google-camera-lens-icon-symbol-free-png.webp"
+                    width="35px"
+                    title="Search by image"
+                    style="margin-right: 10px"
+                />
+            </div>
+            <div style="margin-top: 30px;display: flex; gap: 13px;">
+                <button class="searchBtn" id="searchBtn0" onclick="Search()">Google Search</button>
+                <button class="searchBtn" id="searchBtn1">I'm Feeling Lucky</button>
+            </div>
+            <div id="otherLang" style="font-size: 14px; margin-top: 20px">
+            Google offer in :
+                <a onclick="changeLang()" style="user-select: none;">မြန်မာ(မြန်မာ)</a>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerRow1">
+                <label id="lang">English</label>
+                
+            </div>
+            <hr />
+            <div id="footer0">
+                <div id="leftFooterDiv">
+                    <a href="" id="about" class="footerend">About</a>
+                    <a href="" id="advertising" class="footerend"
+                        >Advertising</a
+                    >
+                    <a href="" id="business" class="footerend">Business</a>
+                    <a href="" id="howsearchworks" class="footerend"
+                        >How Search Works</a
+                    >
+                </div>
+                <div id="rightFooterDiv">
+                    <a href="" id="privacy" class="footerend">Privacy</a>
+                    <a href="" id="terms" class="footerend">Terms</a>
+                    <a href="" id="settings" class="footerend">Settings</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        let langCode = 0;
+        let FindText = document.getElementById("searchBar");
+        document.getElementById("searchBar").onkeydown = function(e){
+            if(e.which == 13){
+                Search()
+            }
+        }
+        function Search(){
+            if(FindText.value == ""){
+        }else{
+            let Find = "https://google.com/search?q="+FindText.value;
+            location.href = Find;
+        }
+    }
+        function changeLang(){
+            if(langCode == 0){
+            document.getElementById('searchBtn0').innerHTML = "Google တွင်ရှာရန်"
+            document.getElementById('searchBtn1').innerHTML = " ဥုံဖွ"
+            document.getElementById('otherLang').innerHTML =  'Google ကို အောက်ပါတို့တွင် ကမ်းလှမ်းထားပါသည် -  <a onclick="changeLang()" style="user-select: none;">English</a>'
+            document.getElementById('lang').innerHTML = "မြန်မာ";
+            document.getElementById('about').innerHTML = "အကြောင်း"
+            document.getElementById('advertising').innerHTML = "ကြော်ငြာ"
+            document.getElementById('business').innerHTML = "စီးပွားရေး"
+            document.getElementById('howsearchworks').innerHTML = "Search အလုပ်လုပ်ပုံ"
+            document.getElementById('privacy').innerHTML = "ကိုယ်ရေးအချက်အလက်လုံခြုံမှု"
+            document.getElementById('terms').innerHTML = "Terms"
+            document.getElementById('settings').innerHTML = "ဆက်တင်များ"
+
+            langCode = 1;
+        }else if(langCode == 1){
+            location.reload()
+        }
+    }
+    </script>
+</html>
