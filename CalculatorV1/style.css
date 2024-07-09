@@ -1,0 +1,20 @@
+body{
+    background-color: #001122;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#c0{
+    background-color: #001122;
+    margin-top: 20vh;
+    box-shadow: 0px 5px 40px 1px #2f2857;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 480px;
+}
+#inputOrOutput{
+ border-radius: 15px;   
+}
