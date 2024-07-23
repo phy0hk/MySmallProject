@@ -2,6 +2,10 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "mongodb": "^6.6.1",
-    "mongoose": "^8.3.4"
+    "mongoose": "^8.3.4",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "compile": "tsc ./gg.ts && npx tsc ./gg.ts"
   }
 }

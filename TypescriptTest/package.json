@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "compile": "nodemon gg.ts"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="output">
+            <input type="text" class="outputTxt" id="output" placeholder="" disabled >
+        </div>
+        <div class="input Sans">
+            <div class="innerInputcontainer">
+                <div class="btnRow">
+                    <button class="btn" onclick="output.value=''">AC</button>
+                    <button class="btn" onclick="output.value = output.value.substr(0, output.value.length - 1);">Del</button>
+                    <button class="btn" onclick="output.value+='%'">%</button>
+                    <button class="btn" onclick="output.value+='/'">/</button>
+                </div>
+                <div class="btnRow">
+                    <button class="btn" onclick="output.value+='7'">7</button>
+                    <button class="btn" onclick="output.value+='8'">8</button>
+                    <button class="btn" onclick="output.value+='9'">9</button>
+                    <button class="btn" onclick="output.value+='*'">*</button>
+                </div>
+                <div class="btnRow">
+                    <button class="btn" onclick="output.value+='4'">4</button>
+                    <button class="btn" onclick="output.value+='5'">5</button>
+                    <button class="btn" onclick="output.value+='6'">6</button>
+                    <button class="btn" onclick="output.value+='-'">-</button>
+                </div>
+                <div class="btnRow">
+                    <button class="btn" onclick="output.value+='1'">1</button>
+                    <button class="btn" onclick="output.value+='2'">2</button>
+                    <button class="btn" onclick="output.value+='3'">3</button>
+                    <button class="btn" onclick="output.value+='+'">+</button>
+                </div>
+                <div class="btnRow">
+                    <button class="btn">Mr</button>
+                    <button class="btn" onclick="output.value+='0'">0</button>
+                    <button class="btn" onclick="output.value+='.'">.</button>
+                    <button class="btn" onclick="output.value=eval(output.value)">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

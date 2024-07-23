@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainContainerBody {
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: auto auto auto auto;
+    grid-row: inherit;
+    grid-gap: 100px;
+}
+
+.flowersContainer img {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.flowersContainer {
+    background-color: rgb(220, 239, 255);
+    width: 210px;
+    height: 300px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px 1px rgb(136, 136, 136);
+}
+.flowersContainer:hover{
+    box-shadow: 30px 30px 50px 1px rgb(161, 161, 161),
+                -10px -10px 100px 5px rgb(255, 255, 255);
+    border: none;
+    margin-right: 10px;
+}
