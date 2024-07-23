@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="c0">
+    <input type="text" class="inputField" id="inputOrOutput" disabled>
+    <div class="container" id="c1">
+    
+      <div class="o1">
+      <button id="clear" class="button" onclick="Clear()">C</button>
+      <button id="Del" class="button" onclick="del()">Del</button>
+      <button id="modulus" class="button">%</button>
+      <button id="multiply" class="button">x</button>
+      </div>
+
+      <div class="o2">
+        <button id="nine" class="button">9</button>
+        <button id="eight" class="button">8</button>
+        <button id="seven" class="button">7</button>
+        <button id="divide" class="button">/</button>
+      </div>
+      <div class="o3">
+        <button id="six" class="button">6</button>
+        <button id="five" class="button">5</button>
+        <button id="four" class="button">4</button>
+        <button id="add" class="button">+</button>
+      </div>
+
+     <div class="o4">
+      <button id="three" class="button">3</button>
+      <button id="two" class="button">2</button>
+      <button id="one" class="button">1</button>
+      <button id="sub" class="button">-</button>
+     </div>
+
+     <div class="o5">
+      <button id="dzero" class="button">00</button>
+      <button id="zero" class="button">0</button>
+      <button id="dot" class="button">.</button>
+      <button id="answer" class="button" onclick="solve()">=</button>
+    
+     </div>
+    </div>
+    
+  </div>
+</body>
+<script src="calculate.js"></script>
+</html>
