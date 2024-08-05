@@ -22,7 +22,13 @@ public class ComingBirthday {
         LocalDate Birthday = LocalDate.parse(splitBD[2]+"-"+splitBD[1]+"-"+splitBD[0]);
         LocalDate date = LocalDate.now();
         Period age = Period.between(Birthday, date);
-        System.out.println("You're "+age.getYears()+" years old You'll Become "+(12-age.getYears()+1)+" years old in "+((int)Math.abs(age.getMonths()))+" months and "+(age.getDays())+" days");
+        int ageInYear = age.getYears();
+        if (age.getMonths()>0 || age.getDays()>0) {
+            ageInYear ++;
+        }
+        LocalDate comingBD = Birthday.plusYears(ageInYear);
+        Period uptoComingBD = Period.between(date, comingBD);
+        System.out.println("You're "+age.getYears()+" years old You'll Become "+ageInYear+" years old in "+uptoComingBD.getMonths()+" months and "+uptoComingBD.getDays()+" days");
         scanner.close();
     }
 }

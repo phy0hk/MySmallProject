@@ -4,9 +4,9 @@ public class DBConnection {
     
     public static void main(String[] args){
         Connection connection = null;
+        // connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainingcentredb","root","");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/trainingcentredb","root","");
             System.out.println("!!! DB Connected !!!");
             Statement statement;
             statement = connection.createStatement();
@@ -15,7 +15,7 @@ public class DBConnection {
                 "CALL `ShowBatchDB`");
             int BatchCode,Duration,CourseFee,NetIncome,ExpectedIncome,CourseCode;
             String Date;
-            System.out.println("|BatchCode|\t|StartingDate|\t|Duration|\t|CourseFee|\t|Netincome|\t|ExpectedIncome|\t|Coursecode|");
+            System.out.println("BatchCode StartingDate Duration CourseFee Netincome ExpectedIncome Coursecode");
             while (resultSet.next()) {
                 BatchCode = resultSet.getInt(1);
                 Date = resultSet.getString(2);

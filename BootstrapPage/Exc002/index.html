@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>GG</title>
+</head>
+
+<body class="d-flex flex-column">
+    <div class="container-fluid bg-black p-0">
+    <div class="navbar bg-white p-3 flex-row border-bottom">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  flex-row">
+            <li class="nav-item ms-4">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item ms-4 ">
+                <a class="nav-link active" href="#">About Us</a>
+            </li>
+            <li class="nav-item ms-4 ">
+                <a class="nav-link active" href="#">Contact</a>
+            </li>
+        </ul>
+        <ul class="d-flex navbar-nav flex-row">
+            <li class="nav-item me-4">
+                <a href="#" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item me-4">
+                <a href="#" class="nav-link">Register</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<img src="../image/slide/Jslide3.jpg" class="" alt="">
+
+
+<div class="mainContainer">
+    <h1 class="regHeader">Registeration</h1>
+    <form name="registeration-form" action="index.html" method="get" class="regForm">
+        <div class="eachContainer">
+            <label for="fname" class="label">First Name :</label>
+            <input type="text" name="fname" id="" class="textbox allBoxHover" placeholder="John">
+
+        </div>
+        <div class="eachContainer">
+            <label for="lname" class="label">Last Name :</label>
+            <input type="text" name="lname" id="" class="textbox allBoxHover" placeholder="Auston">
+
+        </div>
+        <div class="eachContainer"><label for="bday" class="label">Birthday :</label>
+            <input type="date" name="bDay" id="" class="textbox allBoxHover">
+        </div>
+        <div class="eachContainer"> 
+            <label for="country" class="label">Country :</label>
+            <select name="" id="" class="country allBoxHover">
+                <option value="myanmar">Myanmar</option>
+                <option value="japan">Japan</option>
+                <option value="uk">United Kingdom</option>
+                <option value="usa">United State of America</option>
+                <option value="afn">African Nigga</option>
+            </select>
+        </div>
+        <div class="eachContainer"> 
+            <label for="city" class="label">City :</label>
+            <input class="search textbox allBoxHover" type="text" name="city" id="city" placeholder="Search">
+        </div>
+        <div class="eachContainer"> <label for="comment" class="label">Comment :</label>
+            <textarea name="comment" id="comment" class="comment allBoxHover"></textarea>
+        </div>
+    <div class="btnContainer">            
+        <input type="submit" class="button" value="Submit" name="submit">
+        <input type="reset" class="button" value="Reset" name="reset">
+    </div>
+    </form>
+</div>
+</body>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+</html>

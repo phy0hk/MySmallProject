@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "//W3C//DTD XHTML 5 Transitional//EN/">
+<html lang="en">
+
+<head>
+    <title>Bootstrp Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <style type="text/CSS">
+        .topnav{
+               background-color:brown;
+               overflow: hidden;
+               
+           }
+        .topnav a{
+            text-decoration: none;
+            display: block;
+            float: left;
+            color: wheat;
+            padding: 10px 15px;
+            text-align: right;
+            float: right;
+        }
+        .topnav a:hover{
+            background-color: rgb(83, 83, 83);
+            color: goldenrod;
+        }
+        .topnav a.active{
+            background-color: rgb(83, 83, 83);
+            color: goldenrod;
+            font-weight: bold;
+        }
+        img{
+          width: 100%;
+          height: auto;
+        }
+        label{
+            text-align: left;
+            padding: 10px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        input[type=text],input[type=date],select,textarea{
+            width: 100%;
+            height: auto;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: beige;
+            box-sizing: border-box;
+            transition: 0.4s ease-in-out;
+        }
+        textarea{
+            background-color: beige;
+            resize: none;
+        }
+        input[type="text"]:focus,input[type="date"]:focus,select:focus,textarea:focus{
+            
+            background-color: red;
+            width: 75%;
+            border: 2px solid gold;
+            border-radius: 5px;
+        }
+        
+        input[type=reset],input[type=submit]{
+            width: 20%;
+            background-color: beige;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+        }
+        
+        input[type=reset]:hover,input[type=submit]:hover{
+            background-color: red;
+            cursor: pointer;
+            border: 1px solid ;
+            border-radius: 10px;
+        }
+        input[type=text].search{
+            background-image: url(image/search-icon-01.jpg);
+            background-repeat: no-repeat;
+            padding-left: 35px;
+            background-position: 5px 5px;
+        }
+        @media screen and (max-width: 600px) {
+                input[type=text],input[type=date],select,textarea{
+                    width: 100%;
+                    margin:5px auto;
+                }
+                input[type=reset],input[type=submit]{
+                    width: 75%;
+                    margin: 5px auto;
+                }
+                label{
+                    float: left;
+                    padding: 1px 5px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <!--Navigation Section-->
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#" style="float: right;">Register</a>
+        <a href="#" style="float: right;">Login</a>
+    </div>
+    <main class="bg-secondary py-5">
+        <div class="container">
+            <img src="image/slide/metro-wallpaper-01.jpg">
+        </div>
+    </main>
+    <section class="container py-5" style="margin-left: auto;margin-right: auto;">
+        <form name="Registration Form" method="get" action="Image Style.html">
+            <div class="row g-5">
+            <label for="name">First Name</label>
+            <input type="text" id="name" name="name" placeholder="Type Your First Name">
+            </div>
+            <div class="row g-5">
+                <label for="Lname">Last Name</label>
+                <input type="text" id="Lname" name="Lname" placeholder="Type Your Last Name">
+            </div>
+            <div class="row g-5">
+                <label for="bdate">Birthday</label>
+                <input type="date" id="bdate" name="bdate">
+            </div>
+            <div class="row g-5">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                <option value="Myanmar">Myanmar</option>
+                <option selected="selected" value="Japan">Japan</option>
+                <option value="usa">USA</option>
+                </select>
+            </div>
+            <div class="row g-5">
+                <label for="city">City</label>
+                <input class="search" type="text" name="city" id="city" value="" placeholder="Search">
+            </div>
+            <div class="row g-5">
+                <textarea name="experience" id="experience" placeholder="Type Your Experience" rows="5" cols="20"></textarea>
+            </div>
+            <div class="row g-5">
+                <input type="reset" name="reset" id="reset" value="Clear">
+                <input type="submit" name="submit" id="submit" value="Uplode">
+            </div>
+    </section>
+    <footer class="container">
+        <div class="boder-top text-center text-muted boder-top-2 py-3">
+            <p>&copy;copyright 2024 Metro computer Myamar</p>
+        </div>
+    </footer>
+</body>
+</html>
