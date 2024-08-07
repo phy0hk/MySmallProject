@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.file.Files;
 import java.util.*;
 
 public class UserRecordManager {
@@ -102,6 +103,23 @@ public class UserRecordManager {
             System.out.println("Record updated.");
         } else {
             System.out.println("Record not found.");
+        }
+    }
+    public void delete(String name){
+        if(Files.notExists(DATA_FILE)){
+            System.out.println("No record yet");
+            return;
+        }
+        try {
+            StringBuilder remainRecord = new StringBuilder();
+            List<String> allline = Files.readAllLines(DATA_FILE);
+            for(String line:allline){
+                String data[] = line.split("");
+                if(!name.equals(data[0])){ 
+                    
+                }
+            }
+        } catch (Exception e) {
         }
     }
 }
